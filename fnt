@@ -1,0 +1,201 @@
+ 12주차
+
+IF_THEN_ELSE = c => x1 => x2 = c(x2)c(x1)
+
+10주차
+
+https://jsbin.com/heducaq/edit?html,js,output
+
+9주차
+
+{ // 강의 영상 관련 과제 첫번째 문제 - 이름(name)을 기준으로 가나다순으로 정렬 (3점)
+let persons = [ {name:"홍길동", age:45}, {name:"김연아", age:30}, {name:"이순신", age:54} ]
+return persons.sort(function(a, b){
+return a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
+});
+}
+
+
+{ // 강의 영상 관련 과제 두번째 문제 - 나이(age)를 기준으로 오름차순으로 정렬 (3점)
+let sortingField = "age";
+let persons = [ {name:"홍길동", age:45}, {name:"김연아", age:30}, {name:"이순신", age:54} ]
+return persons.sort(function(a, b){
+return a[sortingField] - b[sortingField];
+});
+}
+
+ 
+
+두번째의 경우 나이순 정렬을 위해 sortingField를 추가로 선언하였습니다.
+
+let이 아닌 var로 선언하여도 실행이 됬습니다.
+
+8주차
+
+결과를 눌러본 결과, 볼러온 값이 상수가 아닌 문자열로 불러오기가 되는것 같아 parselnt를 사용하여 수정해보았습니다.
+
+계산이 되는점에 있어서는 이상이 없어보입니다.
+
+parseInt 대신 Number을 사용하여 숫자로 변환해도 계산식이 적용되는 것 같습니다.
+
+sumNumbers = () => {
+const n1 = doc01.querySelector("#num1").value
+const n2 = doc01.querySelector("#num2").value
+const sum = doc01.querySelector("#sum")
+sum.value = parseInt(n1) + parseInt(n2)
+}
+
+ 
+
+sumNumbers = () => {
+const n1 = doc01.querySelector("#num1").value
+const n2 = doc01.querySelector("#num2").value
+const sum = doc01.querySelector("#sum")
+sum.value = Number(n1) + Number(n2)
+}
+
+6주차
+
+https://jsbin.com/daqicec/edit?html,css,output
+
+flex-flow:column-reverse wrap-reverse;
+justify-content:center;
+align-content:space-between;
+
+5주차
+
+https://jsbin.com/xotuyuh/edit?html,css,output
+we’re disigning for change and for movement and for adaptation.
+
+we know how to do this, this is not unfamiliar territory.
+
+we can make car seats that move forward and backward so that different people fit.
+
+seat belts do the same thing.
+
+we can broadcast color TV and watch it on a black and white television because the technology understands how to degrade gracefully in these ways.
+
+우리는 변화와 움직임 그리고 적응을 위해 디자인 하고 있다.
+우리는 이것을 어떻게 할지 알고있다. 이것은 생소한 영역이 아니다.
+우리는 서로 다른 사람들의 몸에 맞추기 위해 앞 뒤로 움직일수있는 카시트를 만들수 있다.
+안전벨트 역시 마찬가지다.
+우리는 방송을 컬러 TV로 볼수있고, 흑백으로도 볼 수 있다. 왜냐하면 이 기술은 이러한 방식으로 우아하게 퇴화시키는 방법을 이해하기 때문이다.
+
+(유투브 영상중 graceful degradation 부분)
+
+graceful degradation은 “우아한 낮춤”, “적절한 퇴보”, “성능 저하” 등 여러가지로 번역되고 있다.
+
+위 내용을 빌어 이야기를 하면 이는 컴퓨터의 허용 오차 시스템과 유사하다고 할 수 있다.
+
+구동 환경에 변화가 생겨도 적절히 성능을 낮추면서 최대한 비슷하게 표현하도록 한다.
+
+ 
+
+contextual adaptation 의 경우에는 변화하는 조건에 따라 동적으로 행동을 변경할 수있게한다는 개념이다.
+
+(문맥/상황 적응)
+
+css is intentionally different it intentionally works this way
+
+and to quote John Allsopp from the year 2000 when css was first coming into browsers,
+
+he says, “really we can think of this as a bug of the system, or we can think of control as really a limitation of the printed page.”
+
+it's a limitation of print that I can control everything in it, and if I hand my poster to somebody who can’t see, they have no ability to read it .
+
+and it’s a feature of the web that anybody can access it from any different device.
+
+that’s actually a feature and t hat’s something that we should embrace and figure out how to use , and it doesn’t mean that the problem is solved entirely, but css is designed around that idea and that’s always going to be a difficult problem to solve but one that we have to do in a smart way that keeps the control on the client side.
+
+because the web adapts to context so even the modern web wven the most powerful applications desktop style applications on the modern web, when we put them on the web, the reason to do that is we get universal device support but the trade-off is we lose control, and that’s a feature.
+
+ (유투브 영상 내 관련 항목)
+
+
+
+3주차
+
+<form action="https://postman-echo.com/post" method="post" target="_blank">
+<fieldset>
+<legend>신청 과목</legend>
+<p>이 달에 신청할 과목을 선택하세요 (1과목만 가능)</p>
+<label><input type="radio" name="subject1" value="speaking">회화</label>
+<label><input type="radio" name="subject1" value="grammar">문법</label>
+<label><input type="radio" name="subject1" value="writing">작문</label>
+<p>다음 달에 신청할 과목을 선택하세요 (1과목만 가능)</p>
+<label><input type="radio" name="subject2" value="physics">물리</label>
+<label><input type="radio" name="subject2" value="chemistry">화학</label>
+<label><input type="radio" name="subject2" value="mathematics">수학</label>
+</fieldset>
+<fieldset>
+<legend>메일링</legend>
+<p>메일로 받고 싶은 뉴스 주제를 선택해 주세요 (복수 선택 가능)</p>
+<label><input type="checkbox" name="mailing1" value="news">해외 단신</label>
+<label><input type="checkbox" name="mailing2" value="dialog">5분 회화</label>
+<label><input type="checkbox" name="mailing3" value="pops">모닝팝스</label>
+</fieldset>
+<input type='submit' value='submit'>
+<input type="reset" value='reset'>
+
+</form>
+
+
+
+x,y축 수정하였을경우 (독일국기)
+
+<svg width="160" height="90">
+<rect x="0" y="0" width="160" height="30" style="fill:black;"></rect>
+<rect x="0" y="30" width="160" height="60" style="fill:red;"></rect>
+<rect x="0" y="60" width="160" height="90" style="fill:yellow;"></rect>
+</svg>
+
+ 
+
+x,y축 수정없이 </rect>만 추가했을경우 (이상한 문양)
+
+<svg width="160" height="90">
+<rect x="0" y="0" width="160" height="30" style="fill:black;"></rect>
+<rect x="30" y="0" width="160" height="60" style="fill:red;"></rect>
+<rect x="60" y="0" width="160" height="90" style="fill:yellow;"></rect>
+</svg>
+
+4주차
+
+<style>
+[title~="someid"] {color: black; backgound: white;}
+[title~="onother"] {color: white; backgound: white;}
+</style>
+<div title = "someid">#someid</div>
+<div title = "onother">#someid</div>
+
+다음과 같이 [attribute ~ =”value”] 선택기를 사용하여 id selector와 동일하게 운영 가능하며 하나의 항목만 보이게 만들어 보았습니다.
+
+2주차
+
+<ol reversed>
+ <li>겨울</li>
+ <li>가을</li>
+ <li>여름</li>
+ <li>봄</li>
+</ol>
+
+
+1주차
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>홍길동(20201234)의 HTML 문서</title>
+  </head>
+  <body>
+     <h1>시간이란...</h1>
+     <p>
+       내일 죽을 것처럼 오늘을 살고<br>
+       영원히 살 것처럼 내일을 꿈꾸어라
+     </p>
+     <img src="https://picsum.photos/200">
+  </body>
+</html>
+
+https://muretys.github.io/web2020/first.html
